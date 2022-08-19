@@ -18,19 +18,18 @@ ___
 - Randomize cards after every game
 - Show card face when card is clicked 
 - Detection for all matches matched
-- Display to tracj match points
+- Display to track match points
 - Display to show who won
 
 ## Stretch Goals
 ___
 - Single player timed option
 - Different themes
-- Option to choose different board sizes
+- Option to choose different board sizes/difficulties
 
 - CSS effects for matches
 
-<!-- Potential road blocks
+## Potential road blocks
 
-1. Getting the logic together
-2. Being aware of syntax errors as to not waste time
-3. Making sure the pacing is right to be finished on time -->
+- Making the different difficulties
+- Setting up the CPU
