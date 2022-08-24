@@ -2,6 +2,9 @@ const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+const player = document.querySelector('player')
+player.innerHTML = "you:" + 8 ;
+// let you = document.getElementById('ceo').innerHTML;
 // let points = document.querySelector('h1').innerText;
 function flipCard(){
     if(lockBoard) return;
@@ -20,8 +23,8 @@ function flipCard(){
         checkForMatch();
 }
 
-
-
+you = "1"
+console.log(player);
 
 
 function checkForMatch() {
