@@ -3,9 +3,8 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 const player = document.querySelector('player')
-player.innerHTML = "you:" + 8 ;
-// let you = document.getElementById('ceo').innerHTML;
-// let points = document.querySelector('h1').innerText;
+ player.innerHTML;
+
 function flipCard(){
     if(lockBoard) return;
     if(this === firstCard) return;
@@ -23,7 +22,6 @@ function flipCard(){
         checkForMatch();
 }
 
-you = "1"
 console.log(player);
 
 
@@ -32,11 +30,13 @@ function checkForMatch() {
     console.log(firstCard.dataset.framework)
     isMatch ? disableCards() : unflipCards();
        
-}            
+}            x = 0;
 
 function disableCards(){
             firstCard.removeEventListener('click', flipCard);
             secondCard.removeEventListener('click', flipCard);
+            x++
+            player.innerHTML = "you:" + x;
 
             resetBoard();
 }
