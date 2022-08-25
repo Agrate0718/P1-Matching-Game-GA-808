@@ -107,7 +107,7 @@ function NPC(){
     }   console.log(n);
         document.getElementById(n).click();
         computer = false;
-       }, 100);}
+       }, 500);}
     
 function displayTurn(){
         if(turn == true){
