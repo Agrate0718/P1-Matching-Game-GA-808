@@ -14,16 +14,13 @@ Name{
 }
 
 html { 
-    background: url(https://i.pinimg.com/originals/f9/98/d8/f998d86ab8e090fc409351f89b0bb388.png) no-repeat center center fixed; 
+    background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIAAzQMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAADAgEABv/EABoQAQEBAQEBAQAAAAAAAAAAAAABAhExEiH/xAAZAQEBAQEBAQAAAAAAAAAAAAACAQADBQT/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREC/9oADAMBAAIRAxEAPwDwGYuMkJI+R49bF5jMwkgja2RcjpF5iBa6RUjZFyJaFZIqRsyriDanjZFyNmUTUcdwny7jNorGXJeMsZtDYmw1ibFKUFiLD2IsWFKGwejaiNQjlDYOw1iLFOBqL6XSKpReYTMRmEzEGrzF5ickygWqzF5jMwmYIWtkXIyQkghayRcjpFyMLOOkXI3iaOo47i+O4mto7GWE4yxdXRWIsNYixVFqIsLYixSlDqI1DaHqFK6Sh1B6htQeopwNiL6XSFONyTMTkmYyVeYTKMkyLnV5JlGYXI1z6VIuRmVyIDZF8ZFQQrmyNimRLuK45kRYnhLE2MqLEWEqaywViKXUHSOC1B6NoWljpBaFo2h6M4HSLCaRVdFZJkeSZQaTJMoyTI0KTMJB5JEc6vJIiEyNCqkVExcQFRrI1Ec5rmRNZYplVUWIq6issRodJoeljoPQ9E0PRQ4PQ9E0PRacFqDvpdDvpOsdC5HkmUGlyTIskyNClySDzSRHOkhMjyuDQq4uIlVECrjWNQWuY5mcmttZaqpqKuotZYjSKvQ6sdEaHpeh6KHB6Homh6I4LSKvQ6UdY3JMhySMlNkmRZpM0XOlyTIs0mRoUuaSUWauVAJFwcqpRCklVByq6wqd1LuszU11qbWV1RVWotUoyj0q0eqpxOqPS9D1VhxGh6XoWjOI0i+q0i1XR2VwUsXlmpskzRZpJUCmzVyhzSSpjnSykzQ5q5QCwsq5RSqlZC9bKOab1MHF9d1HXdbGxXWWxNrLWxcb1NrOptVXWjtbqotUpGao9VVHqljpInVHpWqOrDkTodqtVFqnGZpM0OauVmpskzQyrzUGw0pJQyrlRzsNKuUMquomGlVKKVUqBhet6KVvUTCfTvpHXdZsXdJ+k2stZsVai1nU2qsjbUWutRaUhyOtHqt1UWqUjLR6rdUdrOkjLUW/rbU0ikf/2Q==) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
 
-/* body{
-    background-color: aqua; 
-}*/
 
 .resetBtn{
     position: relative;
@@ -36,7 +33,7 @@ html {
     align-items: center;
     height: 45px;
     width: 124px;
-    background-color:rgb(219, 205, 192);
+    background-color:rgb(17, 159, 147);
     border-radius: 25px;
     border: 2px solid black;
     
@@ -56,14 +53,13 @@ player,Computer{
 
 .turn{
     border-radius: 50%;
-    background-color:rgb(207, 76, 69, 0.8);
+    background-color:rgb(17, 159, 147);
+    border: 2px solid white;
 }
 
 
 .container{
     margin: auto; 
-    /* display: flex;
-    flex-wrap: wrap; */
     perspective: 1000px; 
     display: grid;
   width: 500px;
@@ -111,8 +107,9 @@ player,Computer{
 #end-game{
     height:100px;
     width: 400px;
-    background-color: blue;
-    border-radius: 50%;
+    background-color: rgb(17, 159, 147);
+    border: 2px solid white;
+    border-radius: 15px;
     z-index: -1;
     opacity: 0;
     position: absolute;
@@ -135,8 +132,10 @@ p{
     left: 1%;
     font-size: 30px;
     width: 400px;
-    
     text-align: center;
+    background-color: rgb(17, 159, 147); 
+    border: 2px solid white;
+    border-radius: 15px;
 }
 #title{
     width: 180px;
