@@ -8,6 +8,8 @@ const resetBtn = document.querySelectorAll('.resetBtn');
 turn = true;
 x = 0;
 y = 0;
+let computer = true;
+let person = true;
 displayTurn();
 function flipCard(){
     if(lockBoard) return;
@@ -17,26 +19,31 @@ function flipCard(){
         //first click
         hasFlippedCard = true;
         firstCard = this; 
-        
+        // console.log(this);
         return
     } 
         //second click
         secondCard = this;
         checkForMatch();
+        if (turn == false){setTimeout(NPC, 1500);}
+        
 }
-console.log(resetBtn);
+// console.log(resetBtn);
 
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    console.log(firstCard.dataset.framework)
+    // console.log(firstCard.dataset.framework)
     isMatch ? disableCards() : unflipCards();
        switchPlayer()
+    //    setTimeout(NPC, 1500);
 }       
 function switchPlayer(){
     if(turn == true){
+        // setTimeout(NPC, 1500);
         turn = false;
     }else{
+        
         turn = true;
     }  displayTurn()
 }
@@ -78,17 +85,30 @@ function resetBoard() {
         card.style.order = randomPos;
     });
 })();
-
 function NPC(){
-    i = Math.floor(Math.random()*16);
-    document.getElementById(i).click();
+    let n = 0;
+    let i = Math.floor(Math.random()*16);
+    let flipCheck = document.getElementById(i).classList;
+    while(flipCheck == "card flip"){
+        i = Math.floor(Math.random()*16);
+        flipCheck = document.getElementById(i).classList;
+        flipCheck = document.getElementById(i).classList;
+        console.log(flipCheck);
+    }    console.log(i);
+        document.getElementById(i).click();
     setTimeout(function() {
-       i = Math.floor(Math.random()*16);
-    document.getElementById(i).click();
-       }, 1000);
+       n = Math.floor(Math.random()*16);
+       let flipCheck2 = document.getElementById(n).classList;
+    while(i == n || flipCheck2 == "card flip"){
+        console.log(i,n,(flipCheck2 == 'card flip'));
+        n = Math.floor(Math.random()*16);
+        flipCheck2 = document.getElementById(n).classList;
+        console.log(n);
+    }   console.log(n);
+        document.getElementById(n).click();
+        computer = false;
+       }, 100);}
     
-
-}
 function displayTurn(){
         if(turn == true){
             CPU.classList.remove('turn');
@@ -101,4 +121,3 @@ function displayTurn(){
 function reset(){ window.location.reload();}
 resetBtn.forEach(btn => btn.addEventListener('click', reset ))
 cards.forEach(card => card.addEventListener('click', flipCard))
-NPC();
