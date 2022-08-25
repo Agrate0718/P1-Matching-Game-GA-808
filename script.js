@@ -36,7 +36,7 @@ function checkForMatch() {
     // console.log(firstCard.dataset.framework)
     isMatch ? disableCards() : unflipCards();
        switchPlayer()
-    //    setTimeout(NPC, 1500);
+       gameCheck()
 }       
 function switchPlayer(){
     if(turn == true){
@@ -118,6 +118,25 @@ function displayTurn(){
             CPU.classList.add('turn');  
         }
     }
+    let msg = document.getElementById("endState")
+    console.log(msg);
+function gameCheck(){
+    let msg = document.getElementById("endState")
+    if(x+y == 8){
+        turn = true;
+         document.getElementById("end-game").style.opacity = "1";
+        document.getElementById("end-game").style.zIndex = "1";
+     if(x>y){
+       msg.innerHTML = "You win!"
+    }else if(x<y){
+       msg.innerHTML = "CPU win"
+    }else{
+       msg.innerHTML = 'Tie'
+    }
+}
+   
+}
+
 function reset(){ window.location.reload();}
 resetBtn.forEach(btn => btn.addEventListener('click', reset ))
 cards.forEach(card => card.addEventListener('click', flipCard))
