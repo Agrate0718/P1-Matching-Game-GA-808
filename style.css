@@ -42,6 +42,10 @@ player,Computer{
     
 }
 
+.turn{
+    background-color: blue;
+}
+
 
 .container{
     width: 640px;
