@@ -101,7 +101,7 @@ player,Computer{
 .back-face{
     width: 100%;
     height: 99%;
-    border-radius: 10px;
+    border-radius: 20%;
 }
 
 .card.flip{
@@ -112,6 +112,7 @@ player,Computer{
     height:100px;
     width: 400px;
     background-color: blue;
+    border-radius: 50%;
     z-index: -1;
     opacity: 0;
     position: absolute;
