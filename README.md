@@ -34,6 +34,19 @@ ___
 - Making the different difficulties
 - Setting up the CPU
 
+##  Deployment
+____
+
+https://agrate071818.github.io/P1-Matching-Game-GA-808/
+
+Source used
+- https://www.youtube.com/watch?v=ZniVgo8U7ek
+
+Growth Ideas
+-Add more themes
+-Increase Cpu difficulties
+-Make streaks (if match is made stay on current players turn)
+-Add 2-player
 
 
 

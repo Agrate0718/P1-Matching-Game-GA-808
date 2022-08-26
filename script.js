@@ -16,31 +16,25 @@ function flipCard(){
     if(this === firstCard) return;
     this.classList.add('flip');
     if(!hasFlippedCard){
-        //first click
         hasFlippedCard = true;
         firstCard = this; 
-        // console.log(this);
         return
     } 
-        //second click
         secondCard = this;
         checkForMatch();
         if (turn == false){setTimeout(NPC, 1500);}
         
 }
-// console.log(resetBtn);
 
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    // console.log(firstCard.dataset.framework)
     isMatch ? disableCards() : unflipCards();
        switchPlayer()
        gameCheck()
 }       
 function switchPlayer(){
     if(turn == true){
-        // setTimeout(NPC, 1500);
         turn = false;
     }else{
         
